@@ -240,7 +240,7 @@ function calcCamera() {
 
 function moveCamera(dir) {
     let s = Math.sin(position.angle);
-    let c = Math.cos(posaition.angle);
+    let c = Math.cos(position.angle);
     position.x += dir * s;
     position.y += dir * c;
     position.matrix = calcCamera();
