@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>4D</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+    ></script>
+    <script src="./init-buffers.js"></script>
+    <script src="./scene.js"></script>
+    <script src="./calculates.js"></script>
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <br>
+    <button class="matrix__pause">pause</button>
+    <br>
+    <ul class="matrix__list">
+      <li class="matrix__item">
+        MultiplyMatr5(MultiplyMatr5(rotate4D(2, 1, angle), rotate4D(0, 3, angle)), translate4D(0, 0, 0, 2))
+        <br>
+        <button id="1">set</button>
+      </li>
+      <li class="matrix__item">
+        MultiplyMatr5(MultiplyMatr5(rotate4D(2, 1, angle), rotate4D(0, 3, angle)), translate4D(0, 3, 0, 2))
+        <br>
+        <button id="2">set</button>
+      </li>
+      <li class="matrix__item">
+        translate4D(0, 3 * Math.sin(angle), 0, 2)
+        <br>
+        <button id="3">set</button>
+      </li>
+      <li class="matrix__item">
+        MultiplyMatr5(MultiplyMatr5(translate4D(0, 3, 0, 0), rotate4D(0, 3, angle)), translate4D(0, 0, 0, 2))
+        <br>
+        <button id="4">set</button>
+      </li>
+    </ul>
+  </body>
+</html>
