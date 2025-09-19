@@ -1,2 +1,2 @@
 # View4D
-Code for watching 4D projection on browser
+Code to view a 4D projection in a browser
